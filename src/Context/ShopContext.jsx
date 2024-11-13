@@ -11,7 +11,7 @@ const ShopContextProvider = (props) => {
   const currency = '$';
   const delivery_fee = 10;
 
-  const backendUrl =  "http://localhost:4000";
+  const backendUrl =  "https://styleswap-backend-1p8e.onrender.com";
   // console.log("Backend URL:", backendUrl);
 
   const [search, setSearch] = useState('');
