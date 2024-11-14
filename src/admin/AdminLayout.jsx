@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
 import Add from '../Pages/AdminAdd';
 import List from '../Pages/AdminList';
 import Orders from '../Pages/AdminOrder';
@@ -31,7 +31,7 @@ const AdminApp = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ToastContainer />
+   
       <Navbar setToken={setToken} />
       <hr />
       <div className="flex w-full">
