@@ -1,12 +1,12 @@
 import React from "react";
 import Title from "../Components/Title";
-import {assets} from '../assets/assets'
+import { assets } from '../assets/assets';
 import NewsLetterBox from "../Components/NewsLetterBox";
 
 function About() {
   return (
     <div>
-      <div className="text-2xl text-center pt-8 border-t ">
+      <div className="text-2xl text-center pt-8 border-t">
         <Title text1={"ABOUT"} text2={"US"} />
       </div>
       <div className="my-10 flex flex-col md:flex-row gap-16">
@@ -17,26 +17,14 @@ function About() {
         />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. temporibus
-            cum eveniet fugit error dicta tenetur. quam magni, aliquid
-            voluptates voluptate maxime ipsum voluptatum reprehenderit,
-            Reprehenderit doloremque fugit est dolor deleniti, assumenda quas
-            id, saepe nulla, sint ipsam esse iure tempora. Blanditii
+            At <strong>StyleSwap</strong>, we’re passionate about transforming the way you experience online shopping. Our platform offers a curated collection of high-quality, trendy apparel and accessories, designed to meet the needs of modern styles and diverse preferences. We believe in providing a seamless shopping experience, where quality meets affordability, so you can express your style effortlessly.
           </p>
           <p>
-            adipisicing elit. Cupiditate, ad nemo provident est quos quia
-            deleniti ullam exercitationem atque autem ipsa earum cumque
-            temporibus cum eveniet fugit error dicta tenetur. quam magni,
-            aliquid voluptates voluptate maxime ipsum voluptatum reprehenderit,
-            temporibus, sequi fugit. Architecto, aspernatur vero ut porro
-            consequuntur nesciunt
+            Founded to make fashion accessible to everyone, StyleSwap brings handpicked collections from renowned brands, emerging designers, and exclusive labels. With a user-friendly platform and personalized recommendations, we ensure you find styles that reflect your unique taste.
           </p>
           <b className="text-gray-800">Our Mission</b>
           <p>
-            Our Mission consectetur adipisicing elit. Accusantium dolore
-            voluptas doloribus quo atque, reiciendis cum provident dolorum
-            quisquam nobis veritatis. Unde ratione, placeat ea eum labore
-            distinctio alias illo!
+            Our mission is to empower individuals to feel confident and stylish by providing access to the latest fashion trends and timeless classics. We are committed to upholding the highest standards in quality, variety, and customer satisfaction, making StyleSwap a trusted destination for fashion enthusiasts.
           </p>
         </div>
       </div>
@@ -47,29 +35,23 @@ function About() {
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Quality Assurance:</b>
           <p className="text-gray-600">
-            consectetur adipisicing elit. Inventore harum ratione, illo
-            temporibus facilis at rem quos magni rerum dolor, totam distinctio
-            et, voluptate maxime quo soluta! Ut, numquam quia!
+            At StyleSwap, we take pride in our commitment to quality. Each product goes through a rigorous selection process to ensure it meets our high standards. From fabric quality to style, we guarantee you’ll receive the best in every order.
           </p>
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Convenience:</b>
           <p className="text-gray-600">
-            consectetur adipisicing elit. Inventore harum ratione, illo
-            temporibus facilis at rem quos magni rerum dolor, totam distinctio
-            et, voluptate maxime quo soluta! Ut, numquam quia!
+            Our platform is designed with your convenience in mind. From seamless browsing to easy checkout, we make shopping effortless and enjoyable. Enjoy quick, hassle-free access to a variety of styles at your fingertips.
           </p>
         </div>
         <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5">
           <b>Exceptional Customer Service:</b>
           <p className="text-gray-600">
-            consectetur adipisicing elit. Inventore harum ratione, illo
-            temporibus facilis at rem quos magni rerum dolor, totam distinctio
-            et, voluptate maxime quo soluta! Ut, numquam quia!
+            Customer satisfaction is at the heart of what we do. Our dedicated support team is here to assist you at every step, ensuring a smooth and satisfying shopping experience. At StyleSwap, we value your feedback and strive to exceed your expectations.
           </p>
         </div>
       </div>
-      <NewsLetterBox/>
+      <NewsLetterBox />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {backendUrl,currency} from '../App';
-import { assets } from '../assets/assets'
+import { assets } from '../assets/admin';
 import { toast } from 'react-toastify';
 
 const Orders = ({ token }) => {

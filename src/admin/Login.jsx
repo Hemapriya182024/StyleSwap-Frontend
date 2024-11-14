@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { backendUrl } from '../App';
+import { backendUrl } from './AdminLayout';
 import { toast } from 'react-toastify';
 
 const Login = ({ setToken }) => {
@@ -10,12 +10,13 @@ const Login = ({ setToken }) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
-      // Send login request
       const response = await axios.post(`${backendUrl}/api/user/admin`, { email, password });
-      console.log("login responce",response);
+      console.log("Full response data:", response.data);
+      console.log("Token received from response:", response.data.token);
 
-      if (response.data.success) {
-        setToken(response.data.token); // Store token in parent state
+      if (response.data.token) {
+        setToken(response.data.token); // Use the passed setToken from AdminApp
+        localStorage.setItem('token', response.data.token); // Save token to localStorage
         toast.success("Login successful!");
       } else {
         toast.error(response.data.message || "Login failed!");
