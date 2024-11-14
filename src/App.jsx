@@ -27,7 +27,7 @@ import List from './Pages/AdminList';
 import Order from './Pages/AdminOrder';
 import ErrorBoundary from './ErrorBoundary';
 
-export const backendUrl = 'http://localhost:4000';
+export const backendUrl = 'https://styleswap-backend-1p8e.onrender.com';
 export const currency = '$';
 
 const App = () => {

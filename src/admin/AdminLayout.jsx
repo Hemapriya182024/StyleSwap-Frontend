@@ -10,7 +10,7 @@ import SideBar from '../Components/AdminSideBar';
 import Login from './Login.jsx'; 
 
 
-export const backendUrl = 'http://localhost:4000';
+export const backendUrl = 'https://styleswap-backend-1p8e.onrender.com';
 export const currency = '$';
 
 const AdminApp = () => {
