@@ -34,7 +34,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const location = useLocation();  
   
-  // Simulate loading of assets (or perform any other loading task)
+
   useEffect(() => {
     const loadAssets = async () => {
       await new Promise(resolve => setTimeout(resolve, 2000));  
@@ -43,7 +43,7 @@ const App = () => {
     loadAssets();
   }, []);
 
-  // Hide the loader on the Cart page
+ 
   const showLoader = location.pathname !== '/cart';
 
   return (
@@ -70,7 +70,7 @@ const App = () => {
           <Route path="/place-order" element={<PlaceOrder />} />
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/admin/*" element={<AdminLayout />} />
+          
          
 
           {/* Admin routes */}
