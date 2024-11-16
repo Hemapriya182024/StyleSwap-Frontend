@@ -23,6 +23,7 @@ const ShopContextProvider = (props) => {
   });
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState('');
+  const [loadingProducts, setLoadingProducts] = useState(true); 
   const navigate = useNavigate();
 
   // Function to persist cartItem in localStorage whenever it changes
@@ -101,21 +102,44 @@ const ShopContextProvider = (props) => {
     }, 0);
   };
 
+  // const getProductsData = async () => {
+  //   if (!backendUrl) {
+  //     toast.error("Backend URL is not set.");
+  //     return;
+  //   }
+
+  //   // Avoid unnecessary API calls
+  //   if (products.length > 0) return;
+
+  //   try {
+  //     const response = await axios.get(`${backendUrl}/api/product/list`);
+  //     setProducts(response.data.products || []);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error.response || error);
+  //     toast.error("Error fetching products");
+  //   }
+  // };
+
   const getProductsData = async () => {
     if (!backendUrl) {
       toast.error("Backend URL is not set.");
       return;
     }
-
-    // Avoid unnecessary API calls
-    if (products.length > 0) return;
-
+  
+    if (products.length > 0) {
+      setLoadingProducts(false); 
+      return;
+    }
+  
     try {
+      setLoadingProducts(true); 
       const response = await axios.get(`${backendUrl}/api/product/list`);
       setProducts(response.data.products || []);
     } catch (error) {
       console.error("Error fetching data:", error.response || error);
       toast.error("Error fetching products");
+    } finally {
+      setLoadingProducts(false); 
     }
   };
 
@@ -162,7 +186,8 @@ const ShopContextProvider = (props) => {
     navigate,
     backendUrl,
     setToken,
-    token
+    token,
+    loadingProducts
   };
 
   return (
