@@ -39,7 +39,7 @@ const Login = ({ setToken }) => {
               value={email}
               className="rounded-md w-full px-3 py-2 border-gray-300 outline-none"
               type="email"
-              placeholder="your@email.com"
+              placeholder="styleswap@gmail.com"
               required
             />
           </div>
@@ -50,7 +50,7 @@ const Login = ({ setToken }) => {
               value={password}
               className="rounded-md w-full px-3 py-2 border-gray-300 outline-none"
               type="password"
-              placeholder="Enter your password"
+              placeholder="Mypassword@123"
               required
             />
           </div>
